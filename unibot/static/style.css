@@ -1,0 +1,280 @@
+/* /static/style.css */
+
+body,html {
+    height: 100%;
+    background-color:#C4DFE6;
+    padding-top: 18px;
+}
+
+img {
+    display: inline;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+}
+
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_scrollbar*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.chat-container {
+    margin: 0 auto;
+    padding: 5px;
+    max-height: 80vh;
+    overflow: auto;
+
+}
+
+.avatar-image-cropper {
+    max-width: 30px;
+    max-height: 30px;
+    border-radius: 50%;
+}
+
+.image-top{
+     width: 50px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    float: center;
+
+}
+
+.image-cropper-right{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    float: right;
+    margin-bottom: 10px;
+
+}
+
+.chat-message {
+   border-radius: .7em;
+   max-width: 90%;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   padding-left: 10px;
+   margin: 3px;
+   overflow-wrap: break-word;
+
+}
+.nav-bar-image {
+    width: 45px;
+    height: 45px;
+}
+
+.navbar-text-header{
+    font-size: 35px;
+}
+
+.navbar-design{
+    background-color: #88d2f2;
+}
+
+.image-container{
+    vertical-align: bottom;
+}
+
+.bot-message {
+    background-color: #003B46;
+    color: #C4DFE6;
+    box-sizing: border-box;
+    display: block;
+    width: auto;
+    padding-right: 15px;
+}
+
+.human-message {
+    background-color: #66A5AD;
+    color: #003B46;
+    padding-right: 10px;
+}
+.count-characters-left {
+    font-size: 0.8em;
+    color: grey;
+}
+
+#input_message{
+   background-color: rgba(196, 223,230,0.1);
+   border-top: 0px;
+   border-left: 0px;
+   border-right: 0px;
+   box-shadow:none;
+}
+/*
+    Options button Generator
+*/
+.options-button {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: .7em;
+  max-width: 85%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 3px;
+  overflow-wrap: break-word;
+  border: 0.05em solid #003B46;
+  background-color: #C4DFE6;
+}
+
+.options-button:hover {
+  background-color: #66A5AD;
+  color: #003B46;
+  border: 0.05em solid #C4DFE6;
+}
+
+#options-container {
+    padding-left: 30px;
+}
+/*
+    Rich Link Preview
+*/
+.glass-box {
+    padding-left: 30px;
+    margin: 3px;
+    overflow: hidden;
+}
+.preview-image-cropper {
+    max-width: 20%;
+    height: auto;
+    border-radius: .7em;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.preview-text {
+    display: inline-block;
+    overflow-wrap: break-word;
+    vertical-align: top;
+    width: 75%;
+    line-height: 1em;
+}
+.website-preview-title {
+    display: block;
+    font-weight: 700;
+    font-family: auto;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+
+.website-preview-description {
+    font-size: 0.8em;
+}
+
+.clickable-rich-container{
+    color: inherit !important;
+}
+
+.clickable-rich-container:hover {
+    text-decoration: none;
+}
+
+.rich-link {
+    color: grey;
+}
+
+/*
+    Loading Message
+    Src: https://codepen.io/anon/pen/jjoyYY
+*/
+.tiblock {
+    align-items: center;
+    display: flex;
+    height: 17px;
+}
+
+.ticontainer .tidot {
+    background-color: #90949c;
+}
+
+.tidot {
+    -webkit-animation: mercuryTypingAnimation 1.5s infinite ease-in-out;
+    border-radius: 2px;
+    display: inline-block;
+    height: 4px;
+    margin-right: 2px;
+    width: 4px;
+}
+
+
+@-webkit-keyframes mercuryTypingAnimation{
+    0%{
+      -webkit-transform:translateY(0px)
+    }
+    28%{
+      -webkit-transform:translateY(-5px)
+    }
+    44%{
+      -webkit-transform:translateY(0px)
+    }
+}
+
+.tidot:nth-child(1){
+    -webkit-animation-delay:200ms;
+}
+.tidot:nth-child(2){
+    -webkit-animation-delay:300ms;
+}
+.tidot:nth-child(3){
+    -webkit-animation-delay:400ms;
+}
+
+.loading-container {
+    padding-left: 30px;
+}
+
+/*
+ * Hide body till everything loads
+ * src: https://stackoverflow.com/questions/3629762/display-html-page-after-loading-complete
+ * Note: Incompatible with IE6
+ */
+
+#hideAll
+ {
+   position: fixed;
+   left: 0px;
+   right: 0px;
+   top: 0px;
+   bottom: 0px;
+   background-color: white;
+   z-index: 99; /* Higher than anything else in the document */
+
+ }
+
+ .main-continer-design {
+     box-sizing: content-box;
+     width: 100%;
+ }
+
+ .position-chat-box {
+     position: fixed;
+     bottom: 140px;
+ }
+
+ [hidden]{
+   display:none;
+ }

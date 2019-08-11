@@ -1,0 +1,50 @@
+<!-- /templates/index.html -->
+
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="/static/images/favicon.ico">
+    <title>UniBot</title>
+
+    </head>
+    <body>
+        <div style="display: none" id="hideAll">&nbsp;</div>
+        <script type="text/javascript">
+            document.getElementById("hideAll").style.display = "block";
+        </script>
+        <nav class="navbar navbar-light fixed-top navbar-design">
+            <a class="navbar-brand nav-bar-image " href="#">
+                <img src="/static/images/unibot.svg" class="d-inline-block align-top" alt="">
+                <span class="navbar-text-header">UniBot</span>
+            </a>
+        </nav>
+        <div class="container main-continer-design h-100">
+            <div class="row h-100">
+        		<div class="mx-auto col-xl-8 col-lg-8 col-md-10 col-sm-12 col-11 my-auto">
+        		   <div class="justify-content-center">
+        		            <div data-simplebar class="chat-container">
+                                <!-- chat messages -->
+                            </div>
+                            <br>
+                            <div>
+                                <input type="text" class="form-control char-limit trim_max" id="input_message" data-max="250" placeholder="Input Here..." label="input-here">
+                                <div class="float-right count-characters-left"><span class="count"></span></div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="{{ url_for('static', filename='custom.js')}}"></script>
+        <script src="/static/dotdotdot.js"></script>
+        <!-- False start by Client -->
+        <script> submit_message("Hey") </script>
+    </body>
+</html>

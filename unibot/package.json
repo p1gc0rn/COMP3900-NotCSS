@@ -1,0 +1,14 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "frontend",
+  "author": "",
+  "license": "ISC",
+  "repository": {
+          "private": true
+            },
+
+  "dependencies": {
+    "dotdotdot-js": "^4.0.9"
+  }
+}

@@ -1,0 +1,40 @@
+version: '3.5'
+services:
+ web_dev:
+  build: ./unibot
+  container_name: "unibot_web"
+  ports:
+   - "7207:5000"
+  environment:
+   - ENV=development
+   - PORT=5000
+  links:
+   - mongodb:mongodb 
+ mongodb:
+  image: mongo:latest
+  container_name: "mongodb"
+  environment:
+   - MONGO_LOG_DIR=/dev/null
+  ports:
+   - 27017:27017
+  command: mongod --smallfiles --logpath=/dev/null # --quiet
+
+ api:
+   image: facebook-api
+   build: ./facebook_api
+   networks:
+   - backend
+   ports:
+   - "8765:8765"
+
+ web-cli:
+   image: facebook-api
+   networks:
+   - backend
+   command: sh
+
+networks:
+ default:
+  name: web_dev
+ backend:
+  driver: bridge
